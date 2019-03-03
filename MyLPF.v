@@ -282,6 +282,14 @@ module MyLPF
 				end
 				else begin
 					deci_cnt <= deci_cnt + 1;
+					
+					if (cnt < NUM_TAPS) begin
+						cnt <= cnt + 1;
+					end
+					if (cnt < NUM_TAPS) begin
+						y <= y + h[cnt] * x;
+					end
+					ast_source_valid <= 1'b0;
 				end
 			end
 			else begin
