@@ -23,6 +23,9 @@ module MyLPF
 	localparam NUM_TAPS = 199;
 	localparam H_WIDTH = 16;
 	localparam Y_WIDTH = H_WIDTH + DATA_WIDTH - 1;
+
+	// RAM 16x256
+	localparam RAM_NUM_ADDRS = 256;
 	
 	
 	integer i;
@@ -260,7 +263,7 @@ module MyLPF
 		else begin
 			
 			if (ast_sink_valid) begin			
-				if (waddr == NUM_TAPS-1) begin
+				if (waddr == RAM_NUM_ADDRS-1) begin
 					waddr <= 0;
 				end
 				else begin
@@ -278,26 +281,32 @@ module MyLPF
 					y <= 0;
 				end
 				else begin
-					deci_cnt <= deci_cnt + 1;			
+					deci_cnt <= deci_cnt + 1;
+					
+				if (cnt < NUM_TAPS) begin
+					cnt <= cnt + 1;
+				end
+				if (cnt < NUM_TAPS) begin
+					y <= y + h[cnt] * x;
+				end
+				ast_source_valid <= 1'b0;
 				end
 			end
 			else begin
 				if (cnt < NUM_TAPS) begin
 					cnt <= cnt + 1;
 				end
-				
 				if (cnt < NUM_TAPS) begin
 					y <= y + h[cnt] * x;
 				end
-				
 				ast_source_valid <= 1'b0;
 			end
 		end
 	end
 	
-	assign raddr = (last_waddr + 1 + cnt <= NUM_TAPS-1)
+	assign raddr = (last_waddr + 1 + cnt <= RAM_NUM_ADDRS-1)
 					? last_waddr + 1 + cnt
-					: last_waddr + 1 + cnt - NUM_TAPS;
+					: last_waddr + 1 + cnt - RAM_NUM_ADDRS;
 
 	ram16x256 ram16x256_inst (
 		.clock (clk),
