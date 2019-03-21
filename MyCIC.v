@@ -49,7 +49,7 @@ module MyCIC
 			end
 			
 			diff[1] <= 0;
-		end else
+		end else if (in_valid)
 		begin
 			integ[1] <= in_data + integ[1];
 			
@@ -67,7 +67,7 @@ module MyCIC
 		begin
 			count <= 0;
 			next_out_valid <= 1'b1;
-		end else
+		end else if (in_valid)
 		begin			
 			if (count == RATE - 1)
 			begin
@@ -78,13 +78,14 @@ module MyCIC
 				count <= count + 1;
 				next_out_valid <= 1'b0;
 			end
+		end else
+		begin
+			next_out_valid <= 1'b0;
 		end
 	end
 	
 	always @(posedge clk)
 	begin
-		out_valid <= next_out_valid;
-		
 		if (~reset_n)
 		begin
 			for (i = 1; i <= NUM_STAGES; i = i + 1) begin
@@ -98,6 +99,8 @@ module MyCIC
 			out_data <= 0;
 		end else
 		begin
+			out_valid <= next_out_valid;
+		
 			if (next_out_valid)
 			begin
 				for (i = 1; i <= NUM_STAGES; i = i + 1) begin

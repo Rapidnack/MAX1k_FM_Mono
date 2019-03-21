@@ -24,9 +24,9 @@ module MyI2S
 
 
 	localparam LRCK_CLK = 1536;
-	localparam LRCK_HALF_CLK = 768;
+	localparam LRCK_HALF_CLK = LRCK_CLK >> 1;
 	localparam BCK_CLK = 24;
-	localparam BCK_HALF_CLK = 12;
+	localparam BCK_HALF_CLK = BCK_CLK >> 1;
 
 
 	reg [10:0] lrck_cnt; // fs = 48k = clk / 1536

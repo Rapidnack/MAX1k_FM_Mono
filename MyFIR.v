@@ -296,9 +296,9 @@ module MyFIR
 		end
 	end
 	
-	assign raddr = (last_waddr + 1 + cnt <= RAM_NUM_ADDRS-1)
-					? last_waddr + 1 + cnt
-					: last_waddr + 1 + cnt - RAM_NUM_ADDRS;
+	assign raddr = (RAM_NUM_ADDRS + last_waddr - (NUM_TAPS - 1) + cnt <= RAM_NUM_ADDRS-1)
+					? RAM_NUM_ADDRS + last_waddr - (NUM_TAPS - 1) + cnt
+					: RAM_NUM_ADDRS + last_waddr - (NUM_TAPS - 1) + cnt - RAM_NUM_ADDRS;
 
 	ram16x256 ram16x256_inst (
 		.clock (clk),
