@@ -40,19 +40,19 @@ module MyI2S
 		if (~reset_n) begin
 			lrck_cnt <= 0;
 			
-			LRCK <= 1'b0;
+			LRCK <= 1'b1;
 		end
 		else begin
 			if (in_valid) begin
 				lrck_cnt <= 0;
 				
-				LRCK <= 1'b0;
+				LRCK <= 1'b1;
 			end
 			else begin
 				lrck_cnt <= lrck_cnt + 1;
 				
 				if (lrck_cnt == LRCK_HALF_CLK-1) begin
-					LRCK <= 1'b1;
+					LRCK <= 1'b0;
 				end
 			end
 		end
