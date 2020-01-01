@@ -2,7 +2,7 @@
 
 MAX1k_FM_Monoプロジェクトは、Intel MAX10 FPGAを使ったFMラジオのVerilogソースコードです。
 
-![全体画像](http://rapidack.sakura.ne.jp/ttl/wp-content/uploads/2019/03/Overall-image.png)
+![全体画像](http://rapidack.sakura.ne.jp/ttl/wp-content/uploads/2020/01/6c8d859741d093976a6c7cb148785b13.png)
 
 - 開発環境: Quartus Prime Lite Edition 18.1
 - FPGAボード: Arrow Development Tools MAX1000
