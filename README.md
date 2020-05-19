@@ -1,21 +1,27 @@
 # MAX1k_FM_Mono
 
-MAX1k_FM_MonoƒvƒƒWƒFƒNƒg‚ÍAIntel MAX10 FPGA‚ğg‚Á‚½FMƒ‰ƒWƒI‚ÌVerilogƒ\[ƒXƒR[ƒh‚Å‚·B
+MAX1k_FM_Monoãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã¯ã€Intel MAX10 FPGAã‚’ä½¿ã£ãŸFMãƒ©ã‚¸ã‚ªã®Verilogã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã§ã™ã€‚
 
-![‘S‘Ì‰æ‘œ](http://rapidack.sakura.ne.jp/ttl/wp-content/uploads/2019/03/Overall-image.png)
+![å…¨ä½“ç”»åƒ](http://rapidack.sakura.ne.jp/ttl/wp-content/uploads/2020/01/6c8d859741d093976a6c7cb148785b13.png)
 
-- ŠJ”­ŠÂ‹«: Quartus Prime Lite Edition 18.1
-- FPGAƒ{[ƒh: Arrow Development Tools MAX1000
-- ƒRƒ“ƒgƒ[ƒ‰: ESP32
+- é–‹ç™ºç’°å¢ƒ: Quartus Prime Lite Edition 18.1
+- FPGAãƒœãƒ¼ãƒ‰: Arrow Development Tools MAX1000
+- ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ©: ESP32
 - ADC: Analog Devices AD9283
 - I2S DAC: PCM5102A
 
-‘I‹ÇA‰¹—Ê‚ÍESP32‚Ìƒ^ƒbƒ`ƒZƒ“ƒT[‚ğg‚¢‚Ü‚·B
-•ÊƒvƒƒWƒFƒNƒg[AvalonPacket](https://github.com/Rapidnack/AvalonPacket)‚ÌArduinoƒ‰ƒCƒuƒ‰ƒŠ‚ğArduino IDE‚ÉƒCƒ“ƒ|[ƒg‚µA
-ƒTƒ“ƒvƒ‹ƒXƒPƒbƒ`AvalonPacket_FM_Radio‚ğ‘‚«‚ñ‚Å‚­‚¾‚³‚¢B
+é¸å±€ã€éŸ³é‡ã¯ESP32ã®ã‚¿ãƒƒãƒã‚»ãƒ³ã‚µãƒ¼ã‚’ä½¿ã„ã¾ã™ã€‚
+åˆ¥ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆ[AvalonPacket](https://github.com/Rapidnack/AvalonPacket)ã®Arduinoãƒ©ã‚¤ãƒ–ãƒ©ãƒªã‚’Arduino IDEã«ã‚¤ãƒ³ãƒãƒ¼ãƒˆã—ã€
+ã‚µãƒ³ãƒ—ãƒ«ã‚¹ã‚±ãƒƒãƒAvalonPacket_FM_Radioã‚’æ›¸ãè¾¼ã‚“ã§ãã ã•ã„ã€‚
 
-![‘€ìƒpƒlƒ‹](http://rapidack.sakura.ne.jp/ttl/wp-content/uploads/2019/03/FrontPanel.png)
+![æ“ä½œãƒ‘ãƒãƒ«](http://rapidack.sakura.ne.jp/ttl/wp-content/uploads/2019/03/FrontPanel.png)
 
+  
+# ãƒ¡ãƒ¢
+
+SPIã‚’æ¥ç¶šã—ãŸçŠ¶æ…‹ã§FPGAã¸ã®sofãƒ•ã‚¡ã‚¤ãƒ«ã®æ›¸ãè¾¼ã¿ã«å¤±æ•—ã™ã‚‹ã“ã¨ãŒã‚ã‚Šã¾ã™ã€‚ãã®å ´åˆã¯pofãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ›¸ãè¾¼ã‚“ã§ãã ã•ã„ã€‚
+
+  
 # Authors
 
 [Rapidnack](http://rapidnack.com/)
