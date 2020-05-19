@@ -1,0 +1,64 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate C:\Users\zaurus\source\repos\MAX1k_FM_Mono\QsysCore.qsys --block-symbol-file --output-directory=C:\Users\zaurus\source\repos\MAX1k_FM_Mono\QsysCore --family="MAX 10" --part=10M08SAU169C8G
+Progress: Loading MAX1k_FM_Mono/QsysCore.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 18.1]
+Progress: Parameterizing module clk_0
+Progress: Adding pio_0 [altera_avalon_pio 18.1]
+Progress: Parameterizing module pio_0
+Progress: Adding pio_1 [altera_avalon_pio 18.1]
+Progress: Parameterizing module pio_1
+Progress: Adding spi_slave_to_avalon_mm_master_bridge_0 [spi_slave_to_avalon_mm_master_bridge 18.1]
+Progress: Parameterizing module spi_slave_to_avalon_mm_master_bridge_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\Users\zaurus\source\repos\MAX1k_FM_Mono\QsysCore.qsys --synthesis=VERILOG --output-directory=C:\Users\zaurus\source\repos\MAX1k_FM_Mono\QsysCore\synthesis --family="MAX 10" --part=10M08SAU169C8G
+Progress: Loading MAX1k_FM_Mono/QsysCore.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 18.1]
+Progress: Parameterizing module clk_0
+Progress: Adding pio_0 [altera_avalon_pio 18.1]
+Progress: Parameterizing module pio_0
+Progress: Adding pio_1 [altera_avalon_pio 18.1]
+Progress: Parameterizing module pio_1
+Progress: Adding spi_slave_to_avalon_mm_master_bridge_0 [spi_slave_to_avalon_mm_master_bridge 18.1]
+Progress: Parameterizing module spi_slave_to_avalon_mm_master_bridge_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: QsysCore: Generating QsysCore "QsysCore" for QUARTUS_SYNTH
+Info: pio_0: Starting RTL generation for module 'QsysCore_pio_0'
+Info: pio_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=QsysCore_pio_0 --dir=C:/Users/zaurus/AppData/Local/Temp/alt8401_6618406434624719061.dir/0004_pio_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/zaurus/AppData/Local/Temp/alt8401_6618406434624719061.dir/0004_pio_0_gen//QsysCore_pio_0_component_configuration.pl  --do_build_sim=0  ]
+Info: pio_0: Done RTL generation for module 'QsysCore_pio_0'
+Info: pio_0: "QsysCore" instantiated altera_avalon_pio "pio_0"
+Info: spi_slave_to_avalon_mm_master_bridge_0: "QsysCore" instantiated spi_slave_to_avalon_mm_master_bridge "spi_slave_to_avalon_mm_master_bridge_0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "QsysCore" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: rst_controller: "QsysCore" instantiated altera_reset_controller "rst_controller"
+Info: spi_slave_to_avalon_mm_master_bridge_0_avalon_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "spi_slave_to_avalon_mm_master_bridge_0_avalon_master_translator"
+Info: pio_0_s1_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "pio_0_s1_translator"
+Info: spi_slave_to_avalon_mm_master_bridge_0_avalon_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "spi_slave_to_avalon_mm_master_bridge_0_avalon_master_agent"
+Info: pio_0_s1_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "pio_0_s1_agent"
+Info: pio_0_s1_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "pio_0_s1_agent_rsp_fifo"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: spi_slave_to_avalon_mm_master_bridge_0_avalon_master_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "spi_slave_to_avalon_mm_master_bridge_0_avalon_master_limiter"
+Info: Reusing file C:/Users/zaurus/source/repos/MAX1k_FM_Mono/QsysCore/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file C:/Users/zaurus/source/repos/MAX1k_FM_Mono/QsysCore/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: QsysCore: Done "QsysCore" with 19 modules, 36 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis
